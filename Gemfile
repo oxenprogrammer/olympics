@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
+# Required in rails 6
+gem 'rexml'
+
+# password hashing
+gem 'bcrypt', '~> 3.1', '>= 3.1.16'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 # Use postgres as the database for Active Record
