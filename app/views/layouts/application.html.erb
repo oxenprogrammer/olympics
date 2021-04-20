@@ -37,5 +37,20 @@
     </div>
   <% end %>
     <%= yield %>
+
+    <footer class='flex'>
+      <%= image_tag "olympics.png", class: "navbar-image" %>
+      <div class="category">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Copyright 2021. All Rights Reserved.</a>
+      </div>
+      <div class="account">
+        <a href="#">Connect with us:</a>
+        <i class="social-icon link-orange fab fa-twitter"></i>
+        <i class="social-icon link-orange fab fa-instagram"></i>
+        <i class="social-icon link-orange fab fa-facebook"></i>
+      </div>
+    </footer>
   </body>
 </html>
