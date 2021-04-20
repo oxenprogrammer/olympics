@@ -24,6 +24,12 @@
       <a href="#">Sign Up</a>
     </div>
   </nav>
+  <div class="ribbon flex">
+    <div class="red-ribbon">
+    </div>
+    <div class="gray-ribbon">
+    </div>
+  </div>
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %> alert-dismissible fade show" role="alert">
       <%= message %>

@@ -20,6 +20,8 @@
 
 * {
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 .flex {
@@ -50,5 +52,17 @@ nav {
     color: #f86309;
   }
 
+}
+
+.red-ribbon {
+  height: 0.5rem;
+  width: 30%;
+  background-color: #f86309;
+}
+
+.gray-ribbon {
+  height: 0.5rem;
+  width: 70%;
+  background-color: #848484;
 }
 
