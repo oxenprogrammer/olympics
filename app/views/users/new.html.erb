@@ -1,2 +1,32 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="container">
+  <div class="row">
+  
+    <div class="col-md-6 mx-auto">
+      <%= form_with(model: @user, local: true) do |f| %>
+        <div class="field">
+          <h1>Sign Up</h1>
+        </div>
+        <div class="field">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class="filed">
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+        <div class="filed">
+          <%= f.submit "Create my account", class: "btn btn-primary mt-4" %>
+        </div>
+      <% end %>
+      <p>Returning Member? <%= link_to "Login Here!", login_path %></p>
+    </div>
+  </div>
+</div>
