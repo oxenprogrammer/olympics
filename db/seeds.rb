@@ -36,28 +36,28 @@ p 'Categories created successfully'
   Article.create!([{
                     title: Faker::Lorem.sentence(word_count: 3),
                     text: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
-                    image: 'https://images.freeimages.com/images/large-previews/eb7/mountain-1379228.jpg',
+                    image: 'https://resources.stuff.co.nz/content/dam/images/1/s/f/6/b/3/image.related.StuffLandscapeSixteenByNine.1420x800.1sf63j.png/1540827339517.jpg',
                     author_id: rand(1..4),
                     category_id: 1
                   },
                    {
                      title: Faker::Lorem.sentence(word_count: 3),
                      text: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
-                     image: 'https://images.freeimages.com/images/large-previews/fee/days-end-1392672.jpg',
+                     image: 'https://www.ivacy.com/blog/wp-content/uploads/2016/08/watch-soccer-olympics.jpg',
                      author_id: rand(1..4),
                      category_id: 2
                    },
                    {
                      title: Faker::Lorem.sentence(word_count: 3),
                      text: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
-                     image: 'https://images.freeimages.com/images/large-previews/940/ostrich-masai-mara-kenya-1365799.jpg',
+                     image: 'https://www1.pictures.zimbio.com/gi/Swimming+15th+FINA+World+Championships+Day+iNq3C_4oNJ_x.jpg',
                      author_id: rand(1..4),
                      category_id: 3
                    },
                    {
                      title: Faker::Lorem.sentence(word_count: 3),
                      text: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
-                     image: 'https://images.freeimages.com/images/large-previews/600/bike-path-1438265.jpg',
+                     image: 'http://www.athleticsweekly.com/wp-content/uploads/2017/08/IAAF-World-Championships-London-2017-who-what-when.jpg',
                      author_id: rand(1..4),
                      category_id: 4
                    }])

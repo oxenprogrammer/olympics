@@ -6,7 +6,7 @@ class Vote < ApplicationRecord
   validate :vote_is_unique, on: :create
 
   def vote_is_unique
-    vote = Vote.find_by_article_id_and_user_id(self[:article_id], self[:user_id])
+    vote = Vote.where(article_id: self[:article_id], user_id: self[:user_id])
     errors.add(:vote_is_unique, 'you can only vote once') unless vote.empty?
   end
 
