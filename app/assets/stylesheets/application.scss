@@ -28,16 +28,42 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   text-decoration: none;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .flex {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 nav {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1.6rem;
   color: #847f7b;
   padding: 0.5rem;
   justify-content: space-between;
@@ -75,7 +101,7 @@ nav {
 footer {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1.6rem;
   color: #847f7b;
   padding: 0.5rem;
   justify-content: space-between;
