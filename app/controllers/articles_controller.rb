@@ -1,5 +1,11 @@
 class ArticlesController < ApplicationController
-  def index; end
+  def index
+    @articles = Article.all
+    @votes_by_article = Vote.count_by_article
+    @votes_by_category = Vote.count_by_category
+    @categories = Category.prioritize(@votes_by_category).ids
+    @featured = Article.most_popular(@votes_by_article)
+  end
 
   def new; end
 
