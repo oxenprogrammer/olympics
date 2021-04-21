@@ -1,3 +1,11 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.container {
+	.featured-article {
+		img {
+			max-height: 100%;
+      max-width: 100%;
+		}
+	}
+}
