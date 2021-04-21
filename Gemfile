@@ -33,6 +33,10 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem 'faker'
+
+# Install wdm Gem if the platform is Windows
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -44,6 +48,9 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'webdrivers'
 end
 
 group :development do
