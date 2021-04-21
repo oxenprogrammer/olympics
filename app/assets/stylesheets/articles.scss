@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .container {
+	flex-direction: column;
 	.featured-article {
 		position: relative;
 		.featured-image {
@@ -22,12 +23,21 @@
 				color: #fa6000;
 				font-size: 2.6rem;
 			}
-			
+
 			.featured-text_caption {
 				margin-top: 1rem;
 				font-weight: 700;
 				color: #fff;
 			}
+		}
+	}
+	.categories {
+		position: relative;
+		top: -0.2rem;
+		grid-template-columns: auto auto auto auto;
+		.categories-image {
+			height: 24rem;
+			object-fit: cover;
 		}
 	}
 }
