@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
   delete '/logout', to: 'sessions#destroy'
   resources :users
+  resources :categories, only: %i[index new create show]
+  resources :articles, only: %i[index new create show] do
+    resources :votes, only: %i[new create destroy]
+  end
 end
