@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  get 'categories/show'
   root 'articles#index'
-  get 'articles/index'
-  get 'articles/new'
-  get 'articles/show'
+  get '/' => 'articles#index' 
   get '/signup', to: 'users#new'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
