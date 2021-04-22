@@ -1,3 +1,51 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.main-category {
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 4px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 6px
+    );
+  padding-bottom: 2.4rem;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+
+  .sub-category {
+    grid-template-columns: 50% 50%;
+
+    .text-category {
+      padding: 0.5rem 1rem;
+    }
+
+    .text-category_title {
+      color: #f99b00;
+      font-size: 2.2rem;
+      text-decoration: underline;
+      text-decoration-color: #f99b00;
+      text-decoration-thickness: 0.3rem;
+    }
+
+    .text-category_article_title {
+      color: #4d443e;
+      font-size: 1.6rem;
+      padding: 0.5rem 0;
+    }
+
+    p,
+    .author {
+      font-size: 1.4rem;
+    }
+  }
+
+  .third-category,
+  .fourth-category {
+    .text-category {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+  }
+}

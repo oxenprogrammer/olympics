@@ -10,5 +10,6 @@ class CategoriesController < ApplicationController
     @second = @articles[1]
     @third = @articles[2]
     @fourth = @articles[3]
+    @user = User.all
   end
 end
