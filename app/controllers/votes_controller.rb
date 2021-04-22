@@ -10,11 +10,7 @@ class VotesController < ApplicationController
     @article = Article.find(vote_params[:article_id])
     @category = Category.find(@article.category_id)
 
-    if @vote.save
-      redirect_to category_path(@category.id)
-    else
-      render :new, status: :unprocessable_entity
-    end
+    redirect_to category_path(@category.id) if @vote.save
   end
 
   def vote_params
