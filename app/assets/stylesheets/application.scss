@@ -15,42 +15,42 @@
  */
 // @import 'bootstrap/scss/bootstrap';
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/brands";
 @import "@fortawesome/fontawesome-free/scss/solid";
 @import "@fortawesome/fontawesome-free/scss/regular";
 @import "@fortawesome/fontawesome-free/scss/v4-shims";
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&display=swap");
 
 * {
-	text-decoration: none;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ::before,
 ::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html,
 body {
   font-family: "Montserrat", sans-serif;
-	font-size: 62.5%;
-	width: 100%;
-	height: 100%;
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 input,
@@ -58,8 +58,8 @@ textarea,
 select,
 button {
   width: 36rem;
-	padding: 0;
-	margin: 1rem;
+  padding: 0;
+  margin: 1rem;
   box-sizing: border-box;
 }
 
@@ -73,97 +73,112 @@ textarea {
 }
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .grid {
-	display: grid;
+  display: grid;
 }
 
 nav {
-	font-weight: 500;
-	font-size: 1.6rem;
-	color: #847f7b;
-	padding: 0.5rem;
-	justify-content: space-between;
-	align-items: center;
-	.navbar-image {
-		width: 10%;
-	}
-	.category a {
-		padding: 0.5rem;
-		color: #847f7b;
-	}
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #847f7b;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
 
-	.account a {
-		color: #847f7b;
-	}
+  .navbar-link {
+    font-size: 1.4rem;
+  }
 
-	.category a:focus {
-		color: #f86309;
-	}
+  .navbar-link:active,
+  .navbar-link:focus {
+    color: #f86309;
+  }
+
+  .navbar-image {
+    width: 10%;
+  }
+
+  .category a {
+    padding: 0.5rem;
+    color: #847f7b;
+  }
+
+  .account a {
+    color: #847f7b;
+  }
+
+  .account .fa-search {
+    padding: 0 1rem;
+  }
+
+  .category a:focus {
+    color: #f86309;
+  }
 }
 
 .red-ribbon {
-	height: 0.5rem;
-	width: 30%;
-	background-color: #f86309;
+  height: 0.5rem;
+  width: 30%;
+  background-color: #f86309;
 }
 
 .gray-ribbon {
-	height: 0.5rem;
-	width: 70%;
-	background-color: #848484;
+  height: 0.5rem;
+  width: 70%;
+  background-color: #848484;
 }
 
 footer {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 500;
-	font-size: 1.6rem;
-	color: #fff;
-	background-color: #4E443E;
-	padding: 0.5rem;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
-	top: -2.4rem;
-	padding: 0.8rem;
-	.navbar-image {
-		width: 7%;
-	}
-	.terms a {
-		padding: 0.5rem;
-		color: #f86309;
-	}
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #4e443e;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: -2.4rem;
+  padding: 0.8rem;
 
-	.terms a {
-		&:last-child {
-			color: #fff;
-		}
-	}
+  .navbar-image {
+    width: 7%;
+  }
 
-	.account .fab {
-		color: #f86309;
-		font-size: 2.4rem;
-	}
+  .account .account-link {
+    color: #fff;
+  }
 
-	.account a {
-		color: #fff;
-	}
+  .terms .term-link {
+    padding: 0.5rem;
+    color: #f86309;
 
-	.category a:focus {
-		color: #f86309;
-	}
+    &:last-child {
+      color: #fff;
+    }
+  }
 
-	.container {
-		flex-direction: column;
-	}
+  .account .fab {
+    color: #f86309;
+    font-size: 2.4rem;
+  }
+
+  .category a:focus {
+    color: #f86309;
+  }
+
+  .container {
+    flex-direction: column;
+  }
 }
+
 .form {
   margin: 0 auto;
   position: relative;
   padding: 6rem 0;
-} 
+}
 
 .user-form {
   padding: 11rem 0;
