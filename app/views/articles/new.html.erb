@@ -1,2 +1,21 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+
+<div class="container flex">
+  <div class="background"></div>
+  <%= form_with(model: @article, class: 'form') do |form| %>
+    <div class="form-field">
+      <%= form.url_field :image, placeholder: 'Link to Image...', class: 'image-input', required: true %>
+    </div>
+    <div class="form-field">
+      <%= form.select(:category_id, @category_options) %>
+    </div>
+    <div class="form-field">
+      <%= form.text_field :title, placeholder: 'Title...', required: true, minlength: 6, maxlength: 50 %>
+    </div>
+    <div class="form-field">
+      <%= form.text_area :text, placeholder: 'Article body...', required: true, minlength: 50, maxlength: 3000 %>
+    </div>
+    <div class="actions">
+      <%= form.submit 'Publish', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

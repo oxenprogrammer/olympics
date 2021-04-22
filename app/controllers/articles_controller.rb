@@ -12,7 +12,10 @@ class ArticlesController < ApplicationController
     @fourth = Article.last_by_category(@categories, 3)
   end
 
-  def new; end
+  def new
+    @article = Article.new
+    @category_options = Category.all.map { |c| [c.name.titleize, c.id] }
+  end
 
   def show; end
 end
