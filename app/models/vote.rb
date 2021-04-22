@@ -19,4 +19,13 @@ class Vote < ApplicationRecord
       .joins('INNER JOIN categories ON categories.id=articles.category_id')
       .group(:category_id).order('count_all desc').count
   end
+
+  def self.voted?(user, article)
+    Vote.where(user_id: user.id, article_id: article.id).empty? ? false : true
+  end
+
+  def self.vote_count(article)
+    votes = Vote.where(article_id: article.id).count
+    concat content_tag(:p, votes, class: 'vote-count')
+  end
 end
