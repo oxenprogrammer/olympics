@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :require_login, only: %i[new create]
 
   def index
     @articles = Article.all
@@ -19,4 +20,27 @@ class ArticlesController < ApplicationController
   end
 
   def show; end
+
+  def create
+    @article = current_user.articles.build(article_params)
+
+    if @article.save
+      redirect_to article_url @article.id
+    else
+      render :new
+    end
+  end
+
+  def require_login
+    return unless current_user.nil?
+
+    flash[:alert] = 'Please login to Create an Article'
+    redirect_to login_path
+  end
+
+  def article_params
+    params.require(:article).permit(:title, :text, :image, :category_id)
+  end
+
+  private :require_login
 end
