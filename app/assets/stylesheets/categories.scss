@@ -15,7 +15,7 @@
   grid-template-rows: auto auto;
 
   .sub-category {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: auto 50%;
 
     .text-category {
       padding: 0.5rem 1rem;
@@ -38,6 +38,38 @@
     p,
     .author {
       font-size: 1.4rem;
+    }
+
+    .vote-btn {
+      background-color: #fd6000;
+      width: max-content;
+      border-radius: 5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      font-size: 1.6rem;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .vote-count {
+      width: 23px;
+      padding: 0.5rem;
+      color: #f9a167;
+      font: 600 1rem "Chivo", sans-serif;
+      text-align: center;
+      border: 2px solid #fd6000;
+      border-radius: 100%;
+      background-color: #fff;
+    }
+
+    input:disabled {
+      opacity: 0.6;
+    }
+
+    input:enabled:hover {
+      opacity: 0.8;
     }
   }
 

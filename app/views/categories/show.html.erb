@@ -11,7 +11,15 @@
       <p class="text-category_article_text">
         <%= @first.text.truncate_words(15, omission: '...') %>
       </p>
-      <div class="author">Author: <%= @user.find(@first.author_id).name.titleize %></div>
+      <div class="author">
+        By: <%= @user.find(@first.author_id).name.titleize %>
+        <span class="vote-btn">
+          <%= link_to 'Vote', article_votes_path(@first[:id]), params: { vote: { user_id: current_user.id, article_id: @first.id } }, disabled: voted?(current_user, @first), method: :post %>
+          <span class="vote-count">
+            <%= vote_count(@first) %>
+          </span>
+        </span>
+      </div>
     </div>
   </div>
   <div class="second-category sub-category grid">
@@ -26,7 +34,15 @@
       <p class="text-category_article_text">
         <%= @second.text.truncate_words(15, omission: '...') %>
       </p>
-      <div class="author">Author: <%= @user.find(@second.author_id).name.titleize %></div>
+      <div class="author">
+        By: <%= @user.find(@second.author_id).name.titleize %>
+        <span class="vote-btn">
+          <%= link_to 'Vote', article_votes_path(@second[:id]), params: { vote: { user_id: current_user.id, article_id: @second.id } }, disabled: voted?(current_user, @second), method: :post %>
+          <span class="vote-count">
+            <%= vote_count(@second) %>
+          </span>
+        </span>
+      </div>
     </div>
   </div>
   <div class="third-category sub-category grid">
@@ -41,7 +57,15 @@
       <p class="text-category_article_text">
         <%= @third.text.truncate_words(15, omission: '...') %>
       </p>
-      <div class="author">Author: <%= @user.find(@third.author_id).name.titleize %></div>
+      <div class="author">
+        By: <%= @user.find(@third.author_id).name.titleize %>
+        <span class="vote-btn">
+          <%= link_to 'Vote', article_votes_path(@third[:id]), params: { vote: { user_id: current_user.id, article_id: @third.id } }, disabled: voted?(current_user, @third), method: :post %>
+          <span class="vote-count">
+            <%= vote_count(@third) %>
+          </span>
+        </span>
+      </div>
     </div>
   </div>
   <div class="fourth-category sub-category grid">
@@ -56,7 +80,15 @@
       <p class="text-category_article_text">
         <%= @fourth.text.truncate_words(15, omission: '...') %>
       </p>
-      <div class="author">Author: <%= @user.find(@fourth.author_id).name.titleize %></div>
+      <div class="author">
+        By: <%= @user.find(@fourth.author_id).name.titleize %>
+        <span class="vote-btn">
+          <%= link_to 'Vote', article_votes_path(@fourth[:id]), params: { vote: { user_id: current_user.id, article_id: @fourth.id } }, disabled: voted?(current_user, @fourth), method: :post %>
+          <span class="vote-count">
+            <%= vote_count(@fourth) %>
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </div>
