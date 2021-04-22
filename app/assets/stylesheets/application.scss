@@ -146,9 +146,27 @@ footer {
 		flex-direction: column;
 	}
 }
+.form {
+  margin: 0 auto;
+  position: relative;
+  padding: 6rem 0;
+} 
+
+.user-form {
+  padding: 11rem 0;
+}
+
+.session-form {
+  padding: 17rem 0;
+}
 
 .btn {
   background-color: #f86309;
-  color: #ffffff;
+  color: #fff;
   font-size: 1.6rem;
+}
+
+.navigation-link {
+  font-size: 1.6rem;
+  text-align: center;
 }
