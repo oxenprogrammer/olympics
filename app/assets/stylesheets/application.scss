@@ -120,22 +120,35 @@ footer {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
 	font-size: 1.6rem;
-	color: #847f7b;
+	color: #fff;
+	background-color: #4E443E;
 	padding: 0.5rem;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
-	top: -2rem;
+	top: -2.4rem;
+	padding: 0.8rem;
 	.navbar-image {
 		width: 7%;
 	}
-	.category a {
+	.terms a {
 		padding: 0.5rem;
-		color: #847f7b;
+		color: #f86309;
+	}
+
+	.terms a {
+		&:last-child {
+			color: #fff;
+		}
+	}
+
+	.account .fab {
+		color: #f86309;
+		font-size: 2.4rem;
 	}
 
 	.account a {
-		color: #847f7b;
+		color: #fff;
 	}
 
 	.category a:focus {
