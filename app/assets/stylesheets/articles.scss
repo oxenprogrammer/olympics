@@ -36,5 +36,29 @@
 			height: 24rem;
 			object-fit: cover;
 		}
+		.category-title {
+			font-family: "Chivo", sans-serif;
+			font-weight: 900;
+			font-size: 2rem;
+			position: absolute;
+			top: 12px;
+			padding-left: 1rem;
+			color: #fff;
+			text-decoration: underline;
+			text-decoration-color: #fefe00;
+			text-decoration-thickness: 0.3rem;
+		}
+
+		.article-title {
+			position: relative;
+			z-index: 1;
+			padding-left: 1rem;
+			bottom: 4rem;
+			color: #fff;
+			font-family: 'Chivo', sans-serif;
+			font-weight: 900;
+			font-size: 1.6rem;
+		}
+		
 	}
 }

@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
   has_many :articles
-  enum name: %i[athletics soccer board_games swimming]
+  # enum name: %i[athletics soccer board_games swimming]
 
   validates :name, presence: true
 
@@ -16,5 +16,9 @@ class Category < ApplicationRecord
       find(category).update(priority: i + 1)
     end
     all
+  end
+
+  def self.find_article(article)
+    find(article.category_id)
   end
 end
