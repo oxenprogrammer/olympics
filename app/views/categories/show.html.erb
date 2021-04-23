@@ -14,7 +14,9 @@
       <div class="author">
         By: <%= @user.find(@first.author_id).name.titleize %>
         <span class="vote-btn">
+          <% if logged_in? %>
           <%= link_to 'Vote', article_votes_path(@first[:id]), params: { vote: { user_id: current_user.id, article_id: @first.id } }, disabled: voted?(current_user, @first), method: :post %>
+          <% end %>
           <span class="vote-count">
             <%= vote_count(@first) %>
           </span>
@@ -37,7 +39,9 @@
       <div class="author">
         By: <%= @user.find(@second.author_id).name.titleize %>
         <span class="vote-btn">
+          <% if logged_in? %>
           <%= link_to 'Vote', article_votes_path(@second[:id]), params: { vote: { user_id: current_user.id, article_id: @second.id } }, disabled: voted?(current_user, @second), method: :post %>
+          <% end %>
           <span class="vote-count">
             <%= vote_count(@second) %>
           </span>
@@ -60,8 +64,10 @@
       <div class="author">
         By: <%= @user.find(@third.author_id).name.titleize %>
         <span class="vote-btn">
-          <%= link_to 'Vote', article_votes_path(@third[:id]), params: { vote: { user_id: current_user.id, article_id: @third.id } }, disabled: voted?(current_user, @third), method: :post %>
-          <span class="vote-count">
+          <% if logged_in? %>
+            <%= link_to 'Vote', article_votes_path(@third[:id]), params: { vote: { user_id: current_user.id, article_id: @third.id } }, disabled: voted?(current_user, @third), method: :post %>
+          <% end %>
+            <span class="vote-count">
             <%= vote_count(@third) %>
           </span>
         </span>
@@ -83,7 +89,9 @@
       <div class="author">
         By: <%= @user.find(@fourth.author_id).name.titleize %>
         <span class="vote-btn">
-          <%= link_to 'Vote', article_votes_path(@fourth[:id]), params: { vote: { user_id: current_user.id, article_id: @fourth.id } }, disabled: voted?(current_user, @fourth), method: :post %>
+          <% if logged_in? %>
+            <%= link_to 'Vote', article_votes_path(@fourth[:id]), params: { vote: { user_id: current_user.id, article_id: @fourth.id } }, disabled: voted?(current_user, @fourth), method: :post %>
+          <% end %>
           <span class="vote-count">
             <%= vote_count(@fourth) %>
           </span>
