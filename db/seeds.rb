@@ -7,18 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
-# require 'database_cleaner'
+require 'database_cleaner'
 
-# DatabaseCleaner.clean_with(:truncation)
+DatabaseCleaner.clean_with(:truncation)
 
-User.destroy_all
+# User.destroy_all
 100.times do
   User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: '123456', password_confirmation: '123456')
 end
 
 p 'Users created Successfully'
 
-Category.destroy_all
+# Category.destroy_all
 Category.create!([{
                    name: 'athletics'
                  },
@@ -34,12 +34,12 @@ Category.create!([{
 
 p 'Categories created successfully'
 
-Article.destroy_all
+# Article.destroy_all
 4.times do
   Article.create!([{
                     title: Faker::Lorem.sentence(word_count: 3),
                     text: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
-                    image: 'https://resources.stuff.co.nz/content/dam/images/1/s/f/6/b/3/image.related.StuffLandscapeSixteenByNine.1420x800.1sf63j.png/1540827339517.jpg',
+                    image: 'https://wallpapercave.com/wp/N64MZqE.jpg',
                     author_id: rand(1..4),
                     category_id: 1
                   },
@@ -53,14 +53,14 @@ Article.destroy_all
                    {
                      title: Faker::Lorem.sentence(word_count: 3),
                      text: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
-                     image: 'https://www1.pictures.zimbio.com/gi/Swimming+15th+FINA+World+Championships+Day+iNq3C_4oNJ_x.jpg',
+                     image: 'https://wallpapercave.com/wp/wp2287839.jpg',
                      author_id: rand(1..4),
                      category_id: 3
                    },
                    {
                      title: Faker::Lorem.sentence(word_count: 3),
                      text: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
-                     image: 'http://www.athleticsweekly.com/wp-content/uploads/2017/08/IAAF-World-Championships-London-2017-who-what-when.jpg',
+                     image: 'https://www.designbolts.com/wp-content/uploads/2012/07/Swimming-HD-Wallpaper1.jpg',
                      author_id: rand(1..4),
                      category_id: 4
                    }])
@@ -68,7 +68,7 @@ end
 
 p 'Articles created successfully'
 
-Vote.destroy_all
+# Vote.destroy_all
 100.times do |index|
   Vote.create!({
                  user_id: index + 1,
