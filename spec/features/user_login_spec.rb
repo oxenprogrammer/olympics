@@ -2,9 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'Login', type: :system do
   let(:user) { FactoryGirl.create(:user) }
-  let(:category) { FactoryGirl.create(:category) }
-  let(:article) { FactoryGirl.create(:article, author_id: user.id, category_id: category.id) }
-  let(:vote) { FactoryGirl.create(:vote, article_id: article.id, user_id: user.id) }
 
   it 'shows login button' do
     visit login_path
