@@ -7,5 +7,4 @@ RSpec.describe 'Signup', type: :system do
     visit new_user_path
     expect(page).to have_content('Sign Up')
   end
-
 end
