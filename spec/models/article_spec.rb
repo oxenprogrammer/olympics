@@ -14,6 +14,16 @@ RSpec.describe Article, type: :model do
     expect(@article).to be_valid
   end
 
+  it 'is not valid without an category' do
+    @article = Article.create(category_id: nil)
+    expect(@article).to_not be_valid
+  end
+
+  it 'is not valid without an author' do
+    @article = Article.create(author_id: nil)
+    expect(@article).to_not be_valid
+  end
+
   describe 'Associations' do
     it { should belong_to(:category).without_validating_presence }
     it { should belong_to(:author).without_validating_presence }
