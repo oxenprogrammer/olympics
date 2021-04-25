@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Article, type: :model do
   before(:all) do
-    @user = User.create(name: 'hannah', email: 'hannah12@gmail.com', password: '123456', password_confirmation: '123456')
+    @user = User.create(name: 'hannah', email: 'hannah12@gmail.com', password: '123456',
+                        password_confirmation: '123456')
     category = Category.create(name: 'board_games12', priority: 3)
     @article = Article.create(title: 'This is an Article',
                               text: 'dfghh hhhh jjjjj jjjjj uuuuuuu uuuuuu fddddd ggggg yyyyy ddddd dddd ddddddd',
