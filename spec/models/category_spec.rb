@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Category, type: :model do
   before(:all) do
-    @category = Category.create(id: 1, name: 'athletics', priority: 1)
+    @category = Category.create(name: 'athletics1', priority: 1)
   end
 
   it 'should have valid attributes' do
