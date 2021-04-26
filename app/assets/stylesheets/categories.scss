@@ -10,9 +10,19 @@
       rgba(0, 0, 0, 0.1) 2px,
       rgba(0, 0, 0, 0.1) 6px
     );
-  padding-bottom: 2.4rem;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+
+  .article-container {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 450px 450px;
+  }
+
+  .category-article_image {
+    max-width: 50%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: 20%;
+  }
 
   .sub-category {
     grid-template-columns: auto 50%;
@@ -38,6 +48,7 @@
     p,
     .author {
       font-size: 1.4rem;
+      padding: 4rem 0;
     }
 
     .vote-btn {
@@ -73,11 +84,7 @@
     }
   }
 
-  .third-category,
-  .fourth-category {
-    .text-category {
-      grid-column-start: 1;
-      grid-row-start: 1;
-    }
+  .reverse {
+    flex-direction: row-reverse;
   }
 }
