@@ -1,2 +1,12 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+  <div class='container'>
+    <div class="container-article grid">
+      <%= image_tag @article.image, alt: 'Article image', class: 'article-image' %>
+      <div class="article-single">
+        <div class="author-single">
+          <span>Author: </span> <%= author_name(@article) %>
+        </div
+        <div class="article-single-text"><%= @article.text %></div>
+      </div>
+    </div>
+  </div>

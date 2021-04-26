@@ -4,6 +4,23 @@
 .container {
   flex-direction: column;
 
+  .container-article {
+    grid-template-columns: 50% 50%;
+
+    .article-single {
+      padding: 1rem;
+      font-size: 2.4rem;
+
+      .author-single {
+        color: #fa6000;
+        text-decoration: underline;
+        text-decoration-color: #fa6000;
+        text-decoration-thickness: 0.3rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
   .featured-article {
     position: relative;
     grid-template-columns: auto;
