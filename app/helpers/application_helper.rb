@@ -1,6 +1,6 @@
 module ApplicationHelper
   def navbar_link_name
-    link_to current_user.name, user_url(current_user.id), class: 'nav-link' if logged_in?
+    link_to current_user.name, class: 'nav-link' if logged_in?
   end
 
   def navbar_link_logout
