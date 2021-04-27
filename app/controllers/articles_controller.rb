@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.includes(:comments).find(params[:id])
   end
 
   def create
