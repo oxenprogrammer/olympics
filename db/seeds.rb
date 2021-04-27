@@ -78,3 +78,13 @@ end
 
 p 'Random Votes created successfully'
 
+100.times do |index|
+  Comment.create!({
+                 user_id: index + 1,
+                 article_id: rand(1..16),
+                 text: Faker::Lorem.paragraph_by_chars(number: 80, supplemental: false),
+               })
+end
+
+p 'Random Comments created successfully'
+
