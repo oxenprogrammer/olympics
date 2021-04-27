@@ -1,3 +1,10 @@
+## Olympics Articles
+This is the end of Ruby on Rails Capstone Project that;
+1. Allows guest users to view categories of articles and comments.
+2. Allows guest users to signup for an account.
+3. Allows signed up users to login
+4. Allows authenticated users to write an article with image url upload, and
+5. Allows authenticated users to comment on any article displayed on the home page.
 ## Built With
 
 - Ruby v3.0.0
