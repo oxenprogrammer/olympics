@@ -8,18 +8,19 @@
         </div
         <div class="article-single-text">
           <%= @article.text %>
-          <%= form_with url: article_comments_path(@article.id), method: :post, class: "form user-form" do |f| %>
+          <%= form_with url: article_comments_path(@article.id), method: :post, class: "form comment-form" do |f| %>
             <div class="form-field">
-              <%= f.text_area :text, placeholder: 'Comment body...', required: true, minlength: 10, maxlength: 100 %>
+              <%= f.text_area :text, placeholder: 'Add Comment to article...', required: true, minlength: 10, maxlength: 100 %>
             </div>
             <%= f.hidden_field :article_id, value: @article.id %>
             <div class="form-field">
               <%= f.submit "Comment", class: "btn btn-primary" %>
             </div>
           <% end %>
+          <h3>Comments</h3>
           <% @article.comments.each do |comment| %>
-            <p>Comment: <%= comment.text %><p>
-            <span>Author: </span> <%= author_comment(comment) %>
+            <div class="comment-author"><span>Commentor:</span> <%= author_comment(comment) %></div>
+            <p class="comment"><%= comment.text %><p>
           <% end %>
         </div>
       </div>

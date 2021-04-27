@@ -22,6 +22,7 @@ RSpec.describe Article, type: :model do
   describe 'Associations' do
     it { should belong_to(:category).without_validating_presence }
     it { should belong_to(:author).without_validating_presence }
+    it { should have_many(:comments).without_validating_presence }
     it { should have_many(:votes).without_validating_presence }
     it { should have_many(:voters).without_validating_presence }
   end

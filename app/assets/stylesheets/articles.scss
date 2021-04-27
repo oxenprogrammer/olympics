@@ -6,6 +6,7 @@
 
   .container-article {
     grid-template-columns: 50% 50%;
+    margin-bottom: 2rem;
 
     .article-single {
       padding: 1rem;
@@ -17,6 +18,28 @@
         text-decoration-color: #fa6000;
         text-decoration-thickness: 0.3rem;
         margin-bottom: 1rem;
+      }
+
+      .article-single-text {
+        font-size: 1.6rem;
+      }
+
+      .comment,
+      .comment-author {
+        margin-left: 2rem;
+        font-size: 1.4rem;
+      }
+
+      .comment-author span {
+        font-weight: bold;
+      }
+
+      .comment {
+        padding: 1rem 0;
+      }
+
+      .comment-form {
+        padding: 1rem 0;
       }
     }
   }
