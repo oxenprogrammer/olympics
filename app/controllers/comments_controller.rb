@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.permit(:article_id)
+    params.permit(:text, :article_id)
   end
 
   private :require_login, :comment_params

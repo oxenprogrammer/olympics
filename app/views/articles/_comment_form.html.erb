@@ -1,0 +1,11 @@
+<div class="container flex">
+  <%= form_with model: @comment, class: "form user-form" do |f| %>
+    <div class="form-field">
+      <%= f.text_area :text, placeholder: 'Comment body...', required: true, minlength: 50, maxlength: 3000 %>
+    </div>
+    <%= f.hidden_field :article_id, value: @article.id %>
+    <div class="form-field">
+      <%= f.submit "Comment", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
