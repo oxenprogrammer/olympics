@@ -6,19 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# require 'faker'
-# require 'database_cleaner'
+require 'faker'
+require 'database_cleaner'
 
-# DatabaseCleaner.clean_with(:truncation)
+DatabaseCleaner.clean_with(:truncation)
 
-User.destroy_all
+# User.destroy_all
 100.times do
   User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: '123456', password_confirmation: '123456')
 end
 
 p 'Users created Successfully'
 
-Category.destroy_all
+# Category.destroy_all
 Category.create!([{
                    name: 'athletics'
                  },
@@ -34,7 +34,7 @@ Category.create!([{
 
 p 'Categories created successfully'
 
-Article.destroy_all
+# Article.destroy_all
 4.times do
   Article.create!([{
                     title: Faker::Lorem.sentence(word_count: 3),
@@ -68,7 +68,7 @@ end
 
 p 'Articles created successfully'
 
-Vote.destroy_all
+# Vote.destroy_all
 100.times do |index|
   Vote.create!({
                  user_id: index + 1,
