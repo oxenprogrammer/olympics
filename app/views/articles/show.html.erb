@@ -10,6 +10,7 @@
           <%= @article.text %>
           <% @article.comments.each do |comment| %>
             <p>Comment: <%= comment.text %><p>
+            <span>Author: </span> <%= author_comment(comment) %>
           <% end %>
         </div>
       </div>

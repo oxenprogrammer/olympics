@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
   def require_login
     return unless current_user.nil?
 
-    flash[:alert] = 'Please login to Create an Article'
+    flash[:alert] = 'Please login to Comment on article'
     redirect_to login_path
   end
 

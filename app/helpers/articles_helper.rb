@@ -9,4 +9,8 @@ module ArticlesHelper
   def author_name(article)
     User.find(article.author_id).name.titleize
   end
+
+  def author_comment(comment)
+    User.find(comment.user_id).name.titleize
+  end
 end
