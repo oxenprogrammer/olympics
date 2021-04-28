@@ -1,0 +1,114 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.container {
+  flex-direction: column;
+
+  .container-article {
+    grid-template-columns: 50% 50%;
+    margin-bottom: 2rem;
+
+    .article-single {
+      padding: 1rem;
+      font-size: 2.4rem;
+
+      .author-single {
+        color: #fa6000;
+        text-decoration: underline;
+        text-decoration-color: #fa6000;
+        text-decoration-thickness: 0.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .article-single-text {
+        font-size: 1.6rem;
+      }
+
+      .comment,
+      .comment-author {
+        margin-left: 2rem;
+        font-size: 1.4rem;
+      }
+
+      .comment-author span {
+        font-weight: bold;
+      }
+
+      .comment {
+        padding: 1rem 0;
+      }
+
+      .comment-form {
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  .featured-article {
+    position: relative;
+    grid-template-columns: auto;
+
+    .featured-image {
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      max-width: 100vw;
+      width: 100vw;
+    }
+
+    .featured-text {
+      position: absolute;
+      bottom: 5rem;
+      padding-left: 1rem;
+      font-size: 1.6rem;
+
+      .featured-text_title {
+        color: #fa6000;
+        font-size: 2.6rem;
+      }
+
+      .featured-text_caption {
+        margin-top: 1rem;
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+  }
+
+  .categories {
+    position: relative;
+    top: -0.2rem;
+    grid-template-columns: auto auto auto auto;
+
+    .categories-image {
+      height: 24rem;
+      object-fit: cover;
+    }
+
+    .category-title {
+      font-family: "Chivo", sans-serif;
+      font-weight: 900;
+      font-size: 2rem;
+      position: absolute;
+      top: 12px;
+      padding-left: 1rem;
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-color: #fefe00;
+      text-decoration-thickness: 0.3rem;
+    }
+
+    .article-title {
+      position: relative;
+      z-index: 1;
+      padding-left: 1rem;
+      bottom: 4rem;
+      color: #fff;
+      font-family: "Chivo", sans-serif;
+      font-weight: 900;
+      font-size: 1.6rem;
+    }
+  }
+}

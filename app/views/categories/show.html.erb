@@ -1,0 +1,96 @@
+<div class="main-category">
+  <div class=" article-container grid">
+    <div class="first-category sub-category flex">
+      <%= image_tag @first.image, class: "category-article_image" %>
+      <div class="text-category">
+        <div class="text-category_title">
+          <%= @category.name.titleize %>
+        </div>
+        <div class="text-category_article_title">
+          <%= @first.title.titleize %>
+        </div>
+        <p class="text-category_article_text">
+          <%= @first.text.truncate_words(15, omission: '...') %>
+        </p>
+        <div class="author">
+          Author: <%= @user.find(@first.author_id).name.titleize %>
+        </div>
+        <div class="vote-btn">
+          <%= vote(current_user, @first) %>
+          <span class="vote-count">
+            <%= vote_count(@first) %>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="second-category sub-category flex">
+      <%= image_tag @second.image, class: "category-article_image" %>
+      <div class="text-category">
+        <div class="text-category_title">
+          <%= @category.name.titleize %>
+        </div>
+        <div class="text-category_article_title">
+          <%= @second.title.titleize %>
+        </div>
+        <p class="text-category_article_text">
+          <%= @second.text.truncate_words(15, omission: '...') %>
+        </p>
+        <div class="author">
+          Author: <%= @user.find(@second.author_id).name.titleize %>
+        </div>
+        <div class="vote-btn">
+          <%= vote(current_user, @second) %>
+          <span class="vote-count">
+            <%= vote_count(@second) %>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div class="third-category sub-category flex reverse">
+      <%= image_tag @third.image, class: "category-article_image" %>
+      <div class="text-category">
+        <div class="text-category_title">
+          <%= @category.name.titleize %>
+        </div>
+        <div class="text-category_article_title">
+          <%= @third.title.titleize %>
+        </div>
+        <p class="text-category_article_text">
+          <%= @third.text.truncate_words(15, omission: '...') %>
+        </p>
+        <div class="author">
+          Author: <%= @user.find(@third.author_id).name.titleize %>
+        </div>
+        <div class="vote-btn">
+          <%= vote(current_user, @third) %>
+            <span class="vote-count">
+            <%= vote_count(@third) %>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="fourth-category sub-category flex reverse">
+      <%= image_tag @fourth.image, class: "category-article_image" %>
+      <div class="text-category">
+        <div class="text-category_title">
+          <%= @category.name.titleize %>
+        </div>
+        <div class="text-category_article_title">
+          <%= @fourth.title.titleize %>
+        </div>
+        <p class="text-category_article_text">
+          <%= @fourth.text.truncate_words(15, omission: '...') %>
+        </p>
+        <div class="author">
+          Author: <%= @user.find(@fourth.author_id).name.titleize %>
+        </div>
+        <div class="vote-btn">
+          <%= vote(current_user, @fourth) %>
+          <span class="vote-count">
+            <%= vote_count(@fourth) %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

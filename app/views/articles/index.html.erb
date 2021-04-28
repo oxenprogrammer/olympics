@@ -1,0 +1,33 @@
+<div class="container flex">
+<div class="featured-article grid">
+  <%= image_tag @featured.image, class: "featured-mage" %>
+  <div class="featured-text">
+  <h1>
+    <%= link_to @featured.title, @featured, class: 'featured-text_title'%>
+  </h1>
+  <div class='featured-text_caption'><%= @featured.text[0..100] %></div>
+  </div>
+</div>
+<div class="categories grid">
+  <div class="category-priority">
+    <%= link_to Category.find_article(@first).name.titleize, category_path(@all_categories.find_article(@first)), class: 'category-title'%>
+    <%= image_tag @first.image, class: "categories-image" %>
+    <%= link_to @first.title, @first, class: 'article-title' %>
+  </div>
+  <div class="category-priority">
+    <%= link_to Category.find_article(@second).name.titleize, category_path(@all_categories.find_article(@second)), class: 'category-title'%>
+    <%= image_tag @second.image, class: "categories-image" %>
+    <%= link_to @second.title, @second, class: 'article-title' %>
+  </div>
+  <div class="category-priority">
+    <%= link_to Category.find_article(@third).name.titleize, category_path(@all_categories.find_article(@third)), class: 'category-title'%>
+    <%= image_tag @third.image, class: "categories-image" %>
+    <%= link_to @third.title, @third, class: 'article-title' %>
+  </div>
+  <div class="category-priority">
+    <%= link_to Category.find_article(@fourth).name.titleize, category_path(@all_categories.find_article(@fourth)), class: 'category-title'%>
+    <%= image_tag @fourth.image, class: "categories-image" %>
+    <%= link_to @fourth.title, @fourth, class: 'article-title' %>
+  </div>
+</div>
+</div>
