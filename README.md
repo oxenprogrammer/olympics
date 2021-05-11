@@ -5,6 +5,10 @@ This is the end of Ruby on Rails Capstone Project that;
 3. Allows signed up users to login
 4. Allows authenticated users to write an article with image url upload, and
 5. Allows authenticated users to comment on any article displayed on the home page.
+
+## Screenshot
+
+![screenshot](./olympics.png)
 ## Built With
 
 - Ruby v3.0.0
